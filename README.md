@@ -21,4 +21,4 @@ Get the latest signed and notarized DMG from the [releases page](https://github.
 
 ## Contact
 
-<vnvtrs@gmail.com>
+<tarasivaniv.ti@gmail.com>
