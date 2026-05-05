@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>idek — peer-to-peer iPhone control surface for macOS</title>
+  <meta name="description" content="idek turns your iPhone into a configurable grid of buttons that trigger actions on your Mac. Local-network only, no account, no telemetry.">
+  <meta property="og:title" content="idek">
+  <meta property="og:description" content="A peer-to-peer iPhone control surface for macOS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://n3pt7un.github.io/idek-mac/">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #fdfdfc;
+      --border: #e3e3e0;
+      --accent: #0a66c2;
+      --card: rgba(127,127,127,.07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #eaeaea;
+        --muted: #a0a0a0;
+        --bg: #141414;
+        --border: #2a2a2a;
+        --accent: #6ea8ff;
+        --card: rgba(255,255,255,.04);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      padding: 3rem 1.25rem 4rem;
+      max-width: 720px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { margin-bottom: 2.5rem; }
+    h1 { font-size: 2.4rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; letter-spacing: -.005em; }
+    p, ul { margin: .5rem 0 1rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .35rem 0; }
+    a { color: var(--accent); }
+    code { font: .9em ui-monospace, SFMono-Regular, Menlo, monospace; background: rgba(127,127,127,.12); padding: .1em .35em; border-radius: 4px; }
+    .cta {
+      display: inline-block;
+      padding: .75rem 1.4rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin: .5rem .5rem .5rem 0;
+    }
+    .cta.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .download-row { margin: 1.5rem 0 2rem; }
+    .req {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: .95rem;
+    }
+    .req p:last-child { margin-bottom: 0; }
+    footer { color: var(--muted); font-size: .85rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>idek</h1>
+    <p class="tagline">A peer-to-peer iPhone control surface for macOS.</p>
+  </header>
+
+  <p>idek turns your iPhone into a configurable grid of buttons that trigger actions on your Mac &mdash; launching apps, sending keyboard shortcuts, controlling media, running scripts, and more. The two apps talk directly over your local network. No account. No telemetry. No server.</p>
+
+  <div class="download-row">
+    <a class="cta" href="https://github.com/n3pt7un/idek-mac/releases/latest">Download for macOS</a>
+    <a class="cta secondary" href="privacy/">Privacy policy</a>
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Pairs an iPhone and a Mac over Wi-Fi or wired LAN, with a TLS-pinned, HMAC-authenticated channel.</li>
+    <li>Configurable pages of buttons with icons, multi-state toggles, and chained actions.</li>
+    <li>22 built-in action types: launch app, keyboard shortcut, media keys, volume, AppleScript, shell, URL, and more.</li>
+    <li>Long-press, hold-to-repeat, and multi-action chains.</li>
+  </ul>
+
+  <h2>System requirements</h2>
+  <div class="req">
+    <p><strong>Mac:</strong> macOS 14 (Sonoma) or later, Apple Silicon or Intel.</p>
+    <p><strong>iPhone companion app:</strong> iOS 17 or later. Available separately.</p>
+    <p>Both devices must be on the same local network.</p>
+  </div>
+
+  <h2>Install</h2>
+  <ol>
+    <li>Download the latest <code>.dmg</code> from <a href="https://github.com/n3pt7un/idek-mac/releases/latest">the releases page</a>.</li>
+    <li>Open the DMG and drag <strong>Idek.app</strong> to <code>/Applications</code>.</li>
+    <li>Launch it. The first run will prompt for Local Network and Accessibility permissions &mdash; both are required for idek to function.</li>
+  </ol>
+
+  <footer>
+    <p>Questions: <a href="mailto:vnvtrs@gmail.com">vnvtrs@gmail.com</a> &middot; <a href="privacy/">Privacy policy</a> &middot; <a href="https://github.com/n3pt7un/idek-mac/releases">All releases</a></p>
+  </footer>
+</body>
+</html>

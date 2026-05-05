@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>idek — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for idek, a peer-to-peer iPhone control surface for macOS.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #fdfdfc;
+      --border: #e3e3e0;
+      --accent: #0a66c2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #eaeaea;
+        --muted: #a0a0a0;
+        --bg: #141414;
+        --border: #2a2a2a;
+        --accent: #6ea8ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      padding: 2.5rem 1.25rem 4rem;
+      max-width: 720px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem; }
+    h1 { font-size: 1.9rem; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; letter-spacing: -.005em; }
+    .meta { color: var(--muted); font-size: .9rem; }
+    p, ul { margin: .5rem 0 1rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .25rem 0; }
+    a { color: var(--accent); }
+    code { font: .9em ui-monospace, SFMono-Regular, Menlo, monospace; background: rgba(127,127,127,.12); padding: .1em .35em; border-radius: 4px; }
+    .summary { background: rgba(127,127,127,.07); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0 2rem; }
+    .summary p:last-child { margin-bottom: 0; }
+    footer { color: var(--muted); font-size: .85rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>idek — Privacy Policy</h1>
+    <p class="meta">Last updated: May 5, 2026</p>
+  </header>
+
+  <div class="summary">
+    <p><strong>Short version:</strong> idek does not collect, transmit, or store any personal data on any server. The app communicates only between your own iPhone and your own Mac, over your local network. There is no account, no analytics, no advertising, and no third-party SDKs.</p>
+  </div>
+
+  <h2>What idek is</h2>
+  <p>idek is a control surface that turns an iPhone into a configurable grid of buttons that trigger actions on a paired Mac (launching apps, sending keyboard shortcuts, controlling media, running scripts, etc.). The iPhone app and Mac app communicate directly with each other over your Wi-Fi or wired local network.</p>
+
+  <h2>Information we do not collect</h2>
+  <p>We do not collect any of the following:</p>
+  <ul>
+    <li>Names, email addresses, phone numbers, or other contact information.</li>
+    <li>Account credentials (idek has no accounts and no sign-in).</li>
+    <li>Usage analytics, crash reports, telemetry, or diagnostic data.</li>
+    <li>Advertising identifiers or any cross-app tracking data.</li>
+    <li>Location data.</li>
+    <li>Contacts, photos, calendars, health data, or any other system data.</li>
+  </ul>
+
+  <h2>Information stored on your devices</h2>
+  <p>idek stores the following information locally on your devices. None of it is sent off-device by idek:</p>
+  <ul>
+    <li><strong>Pairing credentials.</strong> When you pair your iPhone with your Mac, a randomly generated cryptographic token is created. The iPhone stores this token in the iOS Keychain. The Mac stores its half in the macOS Keychain. The token is used only to authenticate frames sent between your two devices on your local network.</li>
+    <li><strong>Your deck configuration.</strong> The Mac app stores the buttons, pages, and actions you configure as JSON files inside the app's container on your Mac.</li>
+    <li><strong>Discovery information.</strong> The Mac app advertises a Bonjour service on your local network so the iPhone app can find it. This advertisement contains a non-identifying service name and a public key fingerprint. It is broadcast only on your local network and is not visible outside it.</li>
+  </ul>
+  <p>You can remove all locally stored data by unpairing the devices and uninstalling the apps.</p>
+
+  <h2>Network communication</h2>
+  <p>All communication between the iPhone app and the Mac app happens over your local network (Wi-Fi or Ethernet) using a TLS-encrypted, certificate-pinned, peer-to-peer connection. No data passes through any server operated by the developer or any third party. idek does not contact any backend service.</p>
+
+  <h2>Permissions the app requests</h2>
+  <p>idek requests system permissions only to perform its intended function:</p>
+  <ul>
+    <li><strong>Local Network</strong> (iOS and macOS) — required to discover and connect to your paired device on the LAN.</li>
+    <li><strong>Accessibility</strong> (macOS) — required so that idek can simulate keyboard shortcuts you have configured.</li>
+    <li><strong>Automation</strong> (macOS) — required only when you configure an action that controls another app via AppleScript; macOS will prompt you per target app.</li>
+  </ul>
+  <p>These permissions are used solely to execute actions you explicitly configure. Granting them does not result in any data leaving your device.</p>
+
+  <h2>Third parties</h2>
+  <p>idek does not include any third-party analytics, advertising, attribution, or tracking SDKs. No data is shared with third parties because no data is collected.</p>
+
+  <h2>Children's privacy</h2>
+  <p>idek is not directed to children under 13 and does not knowingly collect any information from anyone, including children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes in a material way, the updated version will be posted at this URL with a new "Last updated" date. Because idek does not collect contact information, we cannot notify you individually.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to <a href="mailto:vnvtrs@gmail.com">vnvtrs@gmail.com</a>.</p>
+
+  <footer>
+    <p><a href="../">&larr; Back to idek</a></p>
+  </footer>
+</body>
+</html>
