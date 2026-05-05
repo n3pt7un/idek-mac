@@ -16,7 +16,7 @@ Get the latest signed and notarized DMG from the [releases page](https://github.
 ## System requirements
 
 - **Mac:** macOS 14 (Sonoma) or later
-- **iPhone companion app:** iOS 17 or later
+- **iPhone companion app:** iOS 18 or later
 - Both devices on the same local network
 
 ## Contact
